@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: my_postgres_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: jobsportal
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: haris123
+    ports:
+      - "5432:5432"
+
+  quarkus_app:
+    build:
+      context: .
+      dockerfile: src/main/docker/Dockerfile.jvm
+    container_name: my_quarkus_app
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"

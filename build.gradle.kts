@@ -1,8 +1,8 @@
 plugins {
     kotlin("jvm") version "1.9.23"
+    application
     kotlin("plugin.allopen") version "1.9.23"
-    id("io.quarkus")
-    id("org.jetbrains.kotlin.plugin.noarg") version "1.9.22"
+    id("io.quarkus") version "3.9.0"
     kotlin("plugin.jpa") version "1.9.23"
 }
 
@@ -10,6 +10,7 @@ repositories {
     mavenCentral()
     mavenLocal()
 }
+
 
 val quarkusPlatformGroupId: String by project
 val quarkusPlatformArtifactId: String by project
@@ -32,6 +33,7 @@ dependencies {
     testImplementation("org.mockito:mockito-junit-jupiter:3.12.4")
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.grpc:grpc-testing:1.42.1")
+    implementation(kotlin("stdlib-jdk8"))
 }
 
 group = "harisbrulicita2024"

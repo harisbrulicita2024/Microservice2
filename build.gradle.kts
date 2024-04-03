@@ -27,7 +27,11 @@ dependencies {
     implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-hibernate-orm")
     implementation("io.quarkus:quarkus-hibernate-orm-panache-kotlin")
+    testImplementation("io.quarkus:quarkus-junit5-mockito:3.2")
+    testImplementation("org.mockito:mockito-core:3.12.4")
+    testImplementation("org.mockito:mockito-junit-jupiter:3.12.4")
     testImplementation("io.quarkus:quarkus-junit5")
+    testImplementation("io.grpc:grpc-testing:1.42.1")
 }
 
 group = "harisbrulicita2024"

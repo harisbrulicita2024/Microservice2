@@ -1,18 +1,24 @@
-# Jobs Listing Service
+# Jobs Portal Service 💼💵
 
-* Create, Read, Update, and Delete Jobs Posts
-* Searching by location, job category, salary range.
-* API, that gives suggested jobs by location.
+This is the second microservice of the Jobs Portal system, developed using Quarkus.
 
-* [For diagram and how will this service work with anothers, please check this.](https://i.imgur.com/u2xMrN3.png)
+## Features:
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+* RPC endpoints for creating profiles for Users, Company, and Admin.
+* RPC endpoints for Create, Read, Update, and Delete operations on profiles.
 
-## Running the application in dev mode
+For a detailed overview of how this service interacts with others, please refer to [this diagram](https://i.imgur.com/SECOND_MICROSERVICE_DIAGRAM.png).
 
-You can run your application in dev mode that enables live coding using:
-```shell script
-./gradlew quarkusDev
-```
+## Additional Components:
+* Integration with ActiveMQ for messaging.
+* PostgreSQL database running on port 5432.
+* ActiveMQ's user-friendly interface can be accessed at port 8161.
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
+## How to Use:
+
+1. Ensure that Docker and Docker Compose are installed on your system.
+2. Clone this repository to your local machine.
+3. Navigate to the root directory of the cloned repository.
+4. Run `docker-compose up` to start the microservice and its dependencies.
+5. Once the service is up and running, you can access the RPC endpoints.
+6. Access the Quarkus developer console at [localhost:8080/q/dev](localhost:8080/q/dev).

@@ -10,9 +10,7 @@ This is the second microservice of the Jobs Portal system, developed using Quark
 For a detailed overview of how this service interacts with others, please refer to [this diagram](https://i.imgur.com/SECOND_MICROSERVICE_DIAGRAM.png).
 
 ## Additional Components:
-* Integration with ActiveMQ for messaging.
 * PostgreSQL database running on port 5432.
-* ActiveMQ's user-friendly interface can be accessed at port 8161.
 
 ## How to Use:
 

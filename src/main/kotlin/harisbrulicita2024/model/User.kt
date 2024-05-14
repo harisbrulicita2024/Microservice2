@@ -10,13 +10,13 @@ class User(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var userId: Long? = null,
 
-    var name: String = "", // Defaultna vrednost prazan string
+    var name: String = "",
 
-    var surname: String = "", // Defaultna vrednost prazan string
+    var surname: String = "",
 
-    var email: String = "", // Defaultna vrednost prazan string
+    var email: String = "",
 
-    var password: String = "", // Defaultna vrednost prazan string
+    var password: String = "",
 
     var birthdate: LocalDate = LocalDate.now(),
 
